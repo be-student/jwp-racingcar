@@ -53,8 +53,8 @@ class CarDaoTest {
 
         @BeforeEach
         void setUp() {
-            carDao.insertAll(List.of(new CarEntity("토미", 9, gameId),
-                    new CarEntity("브리", 9, gameId)));
+            carDao.insertAll(List.of(new CarEntity(0, "토미", 9, gameId),
+                    new CarEntity(1, "브리", 9, gameId)));
         }
 
         @Test

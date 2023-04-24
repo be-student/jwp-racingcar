@@ -25,7 +25,7 @@ public class CarEntity {
     }
 
     public static CarEntity of(final Car car, final GameId gameId) {
-        return new CarEntity(car.getCarName(), car.getPosition(), gameId.getValue());
+        return new CarEntity(car.getCarId().getValue(), car.getCarName(), car.getPosition(), gameId.getValue());
     }
 
     public Car toDomain() {

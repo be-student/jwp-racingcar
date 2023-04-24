@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS GAME
 
 CREATE TABLE IF NOT EXISTS CAR
 (
-    car_id   INT         NOT NULL AUTO_INCREMENT,
+    car_id   INT         NOT NULL,
     name     VARCHAR(10) NOT NULL,
     position INT         NOT NULL,
     game_id  INT         NOT NULL,

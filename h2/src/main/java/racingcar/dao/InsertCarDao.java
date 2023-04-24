@@ -13,8 +13,7 @@ public class InsertCarDao {
 
     public InsertCarDao(final JdbcTemplate jdbcTemplate) {
         insertActor = new SimpleJdbcInsert(jdbcTemplate)
-                .withTableName("car")
-                .usingGeneratedKeyColumns("car_id");
+                .withTableName("car");
     }
 
     public void insertAll(final List<CarEntity> carEntities) {
@@ -25,10 +24,11 @@ public class InsertCarDao {
     }
 
     private Map<String, Object> toMap(final CarEntity carEntity) {
-        final Map<String, Object> parameters = new HashMap<>(3);
+        final Map<String, Object> parameters = new HashMap<>(4);
         parameters.put("name", carEntity.getName());
         parameters.put("game_id", carEntity.getGameId().getValue());
         parameters.put("position", carEntity.getPosition());
+        parameters.put("car_id", carEntity.getCarId().getValue());
         return parameters;
     }
 }
